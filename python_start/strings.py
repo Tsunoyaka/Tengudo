@@ -70,7 +70,7 @@ str7 = 'hello world'
 # print(str7[0:-1:2]) # str7(start:stop:step)
 # print(str7[::-1]) # отрицательный шаг начинает чтение строки с конца 
 
-str7 = 'hello world'
+# str7 = 'hello world'
 # print(str7.find('2')) # 1 - поиск индекса подстроки в строке
 # print(str7.index('2')) 
 # print('*'.join(['hello', 'world', 'bye'])) # соединяет переданный список строк по указанной строке
@@ -134,8 +134,8 @@ num1 >= num2 # False
 # a = 'I\'m student'
 # b = 'Идёт бычок качается,\n\tВздыхает на ходу'
 # print(b)
-# # \n - newline
-# # \t - tabular 
+# \n - newline
+# \t - tabular 
 
 # str8 = r'This is test string\n\t\n'
 # print(str8)
