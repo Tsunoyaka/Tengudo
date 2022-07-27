@@ -108,9 +108,9 @@ bool(None)  # False
 
 """ and, or, not """
 False and False # False
-True and True # True
-False and True # False
-True and False # False
+True and True   # True
+False and True  # False
+True and False  # False
 
 # age = 19
 # if age > 15 and age < 18:
@@ -140,5 +140,33 @@ not True  # False
 # print(int(True))  # 1
 # True + True # 2
 
-a = 10
-print(['ok', 'not ok'][a > 9])
+# a = 10
+# [действие1, дейсвтие2][условие]
+# print(['ok', 'not ok'][a > 9])
+
+""" Тернарный оператор """
+
+# msg = input('Введите сообщение:')
+# if len(msg) > 10:
+#       msg = 'Сообщение длиннее 10 символов'
+# else:
+#       msg = 'Сообщение меньше 10 символов'
+# print(msg)
+
+# msg = input('Введите сообщение:')
+# print('Сообщение длиннее 10 символов' if len ('msg') > 10 else 'Сообщение меньше 10 символов')
+# # действие if условие else другое_действие
+
+
+
+# a = 1
+# if a:
+#       print('ok')
+
+a = 'string'
+assert len(a) == 0
+print('it\'s ok')
+
+# first_num = int(input('1 '))
+# assert first_num == 30, "число не верное!" 
+# print('Число верное!')
