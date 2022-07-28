@@ -9,19 +9,24 @@
 # list_ = [1, 'string', True, False, [1,2], None, {'a:12'}, {1,2}, ('a', 'b', 'c')]
 # print(list_)
 
-list1 = [1, 2, 3, 4, 5, [6,7]]
-list1[0]    # 1
-list1[1]    # 2
-list1[2]    # 3
-list1[5]    # [6,7]
-list1[5][0] # 6
-list1[5][1] # 7
-list1[-1]   # [6,7]
 
-list1[1:-2:1] # [2, 3, 4]
+
+# list1 = [1, 2, 3, 4, 5, [6,7]]
+# list1[0]    # 1
+# list1[1]    # 2
+# list1[2]    # 3
+# list1[5]    # [6,7]
+# list1[5][0] # 6
+# list1[5][1] # 7
+# list1[-1]   # [6,7]
+
+# list1[1:-2:1] # [2, 3, 4]
 
 
 """ Добавление элементов в список """
+
+from pickle import TRUE
+
 
 a = [1, 2, 3]
 
@@ -156,4 +161,152 @@ b2.append(4)
 
 # new_list = my_list[::-1]
 # print(new_list) # ['e', 'd', 'c', 'b', 'a']
+
+
+b5 = ['a', 'b', 'c', 'a', 'a']
+# print(b5.count('a')) # a
+
+# print(b5.index('c')) # 2
+
+
+""" Циклы """
+
+# Цикл - многократное выполнение определенного участка кода.
+
+iter_list = [1, 2, 3, 4, 5]
+# print(iter_list[0])
+# print(iter_list[1])
+# print(iter_list[2])
+# print(iter_list[3])
+# print(iter_list[4])
+
+# 1. for 
+# 2. while
+
+# for item in iter_list:
+#     print(item)
+
+# Итерация - повторение какого-либо действия
+
+# for - цикл работает до тех пор, пока элементы в итерируемом объекте не заказнчиваются.
+# for элемент in итерируемый_объект:
+#         тело цикла
+
+# mail_list = ['Azamat', ' Mirbek', 'Baatai', 'Alym']
+# result = []
+# for name in mail_list:
+#     gmail = name + '@gmail.com'
+#     result.append(gmail)
+# print(result)
+
+
+# int 
+# str
+# list
+# bool
+# tuple
+# set
+# dict
+# None
+
+# print(dir(list))
+
+# types_list = [int, str, list, bool, tuple, None, set, dict]
+# iter_objs = []
+# non_iter_objs = []
+# for obj in types_list:
+#     if '__iter__' in dir(obj):
+#         iter_objs.append(obj)
+#     else:
+#         non_iter_objs.append(obj)
+# print(f'Итерируемые объекты {iter_objs}')
+# print(f'Неитерируемые объекты {non_iter_objs}')
+
+# range() - функция для генерации последовательности чисел
+# range(start, stop, step)
+# range(stop)
+
+# print(list(range(10))) # преобразование последовательности чисел в список из чисел
+
+# num_list = []
+# for num in range(9, 101):
+#     num_list.append(num) 
+# print(num_list)
+
+# num_list = []
+# for num in range(1, 101):
+#     if num % 2 == 0:
+#         num_list.append(num)
+# print(num_list)
+
+# num_list = []
+# for num in range(0, 101, 2):
+#     num_list.append(num)
+# print(num_list)
+
+
+# list_of_list = [[1, 2, 3], ['a', 'b', 'c'], [4, 5, 6]]
+# for list1 in list_of_list:
+#     for elem in list1:
+#         print(elem)
+
+# string = 'helloworld'
+# for i in string:
+#     print(i)
+
+# for _ in range(5):
+#     print('hello')
+
+
+""" цикл while """
+
+# num = 10
+# while num < 11:
+#     print(num)
+
+# Бесконечный цикл
+# while True:
+#     print('Hello')
+
+# while условие - цикл работает до тех пор, пока условение истинно (True)
+
+
+# Запращивать сообщение до тех пор, пока сообщение не будет равно "stop"
+# msg = input('Введите сообщение stop:')
+# while msg != 'stop':
+#     print(msg)
+#     msg = input('Введите сообщение stop:')
+
+# break
+# continue
+
+# while True:
+#     msg = input('Введите сообщение stop:')
+#     if msg == 'stop':
+#         print('Цикл остановлен')
+#         break
+#     print('Сообщение неверно')
+
+# Печатать сообщение до тех пор, пока оно не будет равно 'bye'
+# while True:
+#     msg = input('Введите сообщение stop:')
+#     if msg == 'stop':
+#         print('итерация пропущена')
+#         continue
+#     print('Сообщение неверно')
+
+
+# for num in range(10):
+#     print(num)
+# else:
+#     print('цикл окончен')
+
+
+# for num in range(10):
+#     if num == 5:
+#         break
+#     print(num)
+# else:
+#     print('цикл окончен')
+# print('Разбить')
 
