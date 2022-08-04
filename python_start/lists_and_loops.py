@@ -25,8 +25,6 @@
 
 """ Добавление элементов в список """
 
-from pickle import TRUE
-
 
 a = [1, 2, 3]
 
@@ -115,10 +113,10 @@ ab = ['a', 'b', 'c', 'd']
 # print(ab) # ['c', 'd']
 
 
-a1 = [1, 2, 3]
-b2 = a1
+# a1 = [1, 2, 3]
+# b2 = a1
 
-b2.append(4)
+# b2.append(4)
 # print(b2) # [1, 2, 3, 4]
 # print(a1) # [1, 2, 3, 4]
 # print(id(b2) == id(a1)) # True
@@ -164,7 +162,7 @@ b2.append(4)
 
 
 b5 = ['a', 'b', 'c', 'a', 'a']
-# print(b5.count('a')) # a
+print(b5.count('a')) # a
 
 # print(b5.index('c')) # 2
 
@@ -230,7 +228,7 @@ iter_list = [1, 2, 3, 4, 5]
 
 # num_list = []
 # for num in range(9, 101):
-#     num_list.append(num) 
+#     num_list.d(num) 
 # print(num_list)
 
 # num_list = []
