@@ -161,8 +161,8 @@ ab = ['a', 'b', 'c', 'd']
 # print(new_list) # ['e', 'd', 'c', 'b', 'a']
 
 
-b5 = ['a', 'b', 'c', 'a', 'a']
-print(b5.count('a')) # a
+b5 = ['a', 'b', 'c', 'a', 'a', 'a']
+print(b5.count('a')) # 3
 
 # print(b5.index('c')) # 2
 
