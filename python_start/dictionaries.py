@@ -20,7 +20,7 @@
 
 # dict5 = dict([('name', 'John'), ('list_name', 'Watson')])
 # print(dict5)
-
+      
 
 """ Методы словарей """
 
@@ -84,7 +84,7 @@ iter_dict = {'a':10, 'b': 20, 'c': 30, 'd': 40}
 #     print(i) # keys
 
 # for i in iter_dict:
-#     print(iter_dict[i]) # values
+#     print(iter_dict[i]) # 'val'ues
 
 
 """ keys(), values(), items() """

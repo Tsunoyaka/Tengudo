@@ -97,7 +97,7 @@ ab = ['a', 'b', 'c', 'd']
 # list3.remove(20) # ValueError
 
 
-# # ab.clear() - полностью очищает список
+# # ab.() - полностью очищает список
 # ab.clear()
 # print(ab) # []
 
