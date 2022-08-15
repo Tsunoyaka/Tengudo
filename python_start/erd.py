@@ -5,16 +5,7 @@
 #     for i in data:
 #         if i[0] >= 55 and i[1] > 7:
 # #             result.append('Senior')
-list5 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-rick = 0
-pick = 0
 
-for i in list5:
-    if not i % 2:
-        rick += 1
-    
-    else:
-        pick += 1
-        
-print(f'Нечетные: {pick}')
-print(f'Четные: {rick}')
+nums = [76, 89, 35, 65, 43, 85]
+res2 = list(filter(lambda num: num % == 0, nums))
+print(res2)
