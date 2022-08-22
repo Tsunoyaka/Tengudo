@@ -169,11 +169,11 @@
 
 # a = tuple(i for i in range(1, 10))
 # print(a)
-def func(x):
-    for i in range(x):
-        yield i
+# def func(x):
+#     for i in range(x):
+#         yield i
 
 
-a = func(10)
-for i in a:
-    print(i)
+# a = func(10)
+# for i in a:
+#     print(i)

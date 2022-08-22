@@ -13,7 +13,7 @@ UX - add Email and Message (CRUD)
 from email import message
 import email
 from multiprocessing.connection import answer_challenge
-
+import smtplib
 
 DataBase: dict = dict()
 
@@ -115,12 +115,32 @@ def delete_data(id: int) -> dict:
 # object_ = DataBase[id]
 
 try:
-    object_ = read_to_database(id=4)
+    object_ = read_to_database(id=9)
 except Exception as e:
     print(e)
 else:
-    print(object_)
     print("Вот твои данные")
+    print(object_)
+
+
+dict_ = {
+    1: show_database,
+    2: create_data,
+    3: update_data,
+    4: delete_data
+}
+
+
+if __name__ == "__main__":
+    print("Hello select choice: 1) Show 2) Add 3) Update 4) Delete")
+    while True:
+        answer = int(input("enter choice: "))
+        if answer == 1:
+            dict_[answer](flag=True)
+        elif answer == 2:
+            emeil = input('enter email ')
+            messaga = input() 
+
 # TODO Delete dor data
 # TODO ShowData dor
 
