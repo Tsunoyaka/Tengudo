@@ -136,15 +136,3 @@ def interface():
             break
 
 interface()
-
-# update_data()
-
-# get_all_data()
-
-# get_data_by_id()
-
-# create()
-
-# delete_data()
-
-# clear()

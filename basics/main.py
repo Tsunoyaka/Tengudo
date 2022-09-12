@@ -1,19 +1,14 @@
 """
 
-CRUD - Cread Read Update Delete
+CRUD - Create Read Update Delete
 
-DataBase
+DataBase 
 
 Terminal View
 
 UX - add Email and Message (CRUD)
 
 """
-
-from email import message
-import email
-from multiprocessing.connection import answer_challenge
-import smtplib
 
 DataBase: dict = dict()
 
@@ -26,13 +21,13 @@ def get_data_or_error(DataBase: dict, id: int) -> dict:
     except KeyError as e:
         raise ValueError("Такого индекса не существует!!!")
     else:
-        print(object_)
+        return object_
+
 
 def create_data(email: str, message: str):
     """
-    add object in DataBase
+    add object in Database
     """
-
     global _id
 
     obj = {
@@ -40,11 +35,11 @@ def create_data(email: str, message: str):
         "message": message
     }
     DataBase[_id] = obj
-    
-    
+
     _id += 1
 
-def show_database(flag:bool=False, *args, **kwargs) -> None:
+
+def show_database(flag: bool = False, *args, **kwargs) -> None:
     """
     show all data in DataBase
     """
@@ -64,6 +59,7 @@ def show_database(flag:bool=False, *args, **kwargs) -> None:
     else:
         print(DataBase)
 
+
 def read_to_database(id:int, *args, **kwargs) -> dict:
     """
     it's function return DataBase ---> Object
@@ -74,52 +70,51 @@ def read_to_database(id:int, *args, **kwargs) -> dict:
     return object_
 
 
-def update_data(id: int, **kwargs):
+def update_data(id: int, **kwargs) -> dict:
     """
-    it's function update in DataBase on ID
+    it's function update data in DataBase on ID
     """
-
-    email = kwargs.get('email')
-    message = kwargs.get('message')
+    email = kwargs.get("email")
+    message = kwargs.get("message")
 
     global DataBase
 
-    object_ = DataBase[id]
+    object_ = get_data_or_error(DataBase=DataBase, id=id)
 
-    object_['email'] = email if email else object_['email']
-    object_['message'] = message if message else object_['message']
-
+    object_["email"] = email if email else object_["email"]
+    object_["message"] = message if message else object_["message"]
+  
     return object_
-
-
-for i in range(10):
-    create_data(f"test{i}@test.com", "hello it is SPAMMMM")
 
 
 def delete_data(id: int) -> dict:
     """
-    It's function delete object on ID in DataBase
+    it's funciton delete object on ID in DataBase
     """
-
     global DataBase
     get_data_or_error(DataBase=DataBase, id=id)
     object_ = DataBase.pop(id)
 
     return object_
 
-# show_database(flag=True)
-# answer = read_to_database(id=3)
-# show_database(flag=False, args=answer)
-# update_data(3, email='Zhan@gmail.com', message='Haha lol')
-# delete_data(id=3)
-# object_ = DataBase[id]
+
+
+for i in range(10):
+    create_data(f"test{i}@test.com", "hello it is SPAMMMM")
+
+
+show_database(flag=True)
+answer = read_to_database(id=3)
+show_database(flag=False, args=answer)
+update_data(3, email="Zhant@gmail.com", message="Hahah lol")
+print(delete_data(id=3))
 
 try:
     object_ = read_to_database(id=9)
 except Exception as e:
     print(e)
 else:
-    print("Вот твои данные")
+    print("Вот твои даные!!!!")
     print(object_)
 
 
@@ -131,17 +126,27 @@ dict_ = {
 }
 
 
+
+
 if __name__ == "__main__":
-    print("Hello select choice: 1) Show 2) Add 3) Update 4) Delete")
+    print("Hello select choice: 1) Show  2) Add   3) Update 4) Delete ")
+
     while True:
         answer = int(input("enter choice: "))
         if answer == 1:
             dict_[answer](flag=True)
         elif answer == 2:
-            emeil = input('enter email ')
-            messaga = input() 
+            email = input("enter email: ")
+            message = input("enter message: ")
+            add = dict_[answer]
+            add(email=email, message=message)
+        # elif answer == 3:
+        #     email = input("enter email: ")
+        #     message = input("enter message: ")
+        #     object_ = get_data_or_error(DataBase=DataBase, id=id)
+        #     object_["email"] = email if email else object_["email"]
+        #     object_["message"] = message if message else object_["message"]
+        
 
-# TODO Delete dor data
-# TODO ShowData dor
 
-
+# TODO ShowData upgrade!!!!
