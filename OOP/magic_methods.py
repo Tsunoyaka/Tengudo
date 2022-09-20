@@ -35,6 +35,9 @@
 # B = Contact('21323', 'Georgiy')
 
 
+import re
+
+
 class Person:
     def __init__(self, name, age) -> None:
         self.name = name
@@ -145,11 +148,41 @@ class Human:
         return counter
 
     def __contains__(self, item):
-        if item in self.name:
-            return True
-        return False
+        # for i in self.name:
+        #     if i == item:
+        #         return True
+        # else:
+        #     return False
+        return any(i for i in self.name if i == item)
+    
+
+# h = Human('Vasiliy')
+# # print(len(h))
+# print('a' in h) 
 
 
-h = Human('Vasiliy')
-# print(len(h))
-print('a' in h) 
+""" __iter__ и __next__"""
+
+str_ = 'hello'
+# for i in str_:
+#     print(i)
+
+a = str_.__iter__()
+# # print(a)
+# print(a.__next__())
+# print(a.__next__())
+# print(a.__next__())
+# print(a.__next__())
+# print(a.__next__())
+# print(a.__next__()) # StopIteration
+
+# list_ = [1, 2, 3, 4, 5]
+# l = iter(list_)
+# while True:
+#     try:
+#         res = next(l)
+#         print(res)
+#     except StopIteration:
+#         break
+
+
