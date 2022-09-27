@@ -176,6 +176,8 @@ a = str_.__iter__()
 # print(a.__next__())
 # print(a.__next__()) # StopIteration
 
+list_ = [1, 2, 3, 4, 5]
+l = iter(list_)
 # list_ = [1, 2, 3, 4, 5]
 # l = iter(list_)
 # while True:
@@ -184,5 +186,12 @@ a = str_.__iter__()
 #         print(res)
 #     except StopIteration:
 #         break
+
+while True:
+    try:
+        res = next(l)
+        print(res)
+    except StopIteration:
+        break
 
 
